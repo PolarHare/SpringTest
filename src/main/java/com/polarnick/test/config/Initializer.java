@@ -2,7 +2,6 @@ package com.polarnick.test.config;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -16,7 +15,7 @@ import javax.servlet.ServletRegistration;
  *
  * @author Polyarnyi Nikolay
  */
-public class WebAppInitializer implements WebApplicationInitializer {
+public class Initializer implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {

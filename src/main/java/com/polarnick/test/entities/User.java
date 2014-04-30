@@ -5,25 +5,19 @@ package com.polarnick.test.entities;
  */
 public class User {
 
-    String login;
-    String password;
     String name;
+    int age;
 
-    public User(String login, String password, String name) {
-        this.login = login;
-        this.password = password;
+    public User(String name, int age) {
         this.name = name;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public String getPassword() {
-        return password;
+        this.age = age;
     }
 
     public String getName() {
         return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 }

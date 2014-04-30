@@ -1,6 +1,6 @@
 package com.polarnick.test.service;
 
-import com.polarnick.test.entities.User;
+import com.polarnick.test.entities.UserCredential;
 import com.polarnick.test.entities.UserRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -24,13 +24,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userService.getUser(username);
-        Set<GrantedAuthority> roles = new HashSet();
+        UserCredential user = userService.getUserCredential(username);
+        Set<GrantedAuthority> roles = new HashSet<>();
         roles.add(new SimpleGrantedAuthority(UserRoles.USER.name()));
-        UserDetails userDetails =
-                new org.springframework.security.core.userdetails.User(user.getLogin(),
-                        user.getPassword(),
-                        roles);
-        return userDetails;
+        return new org.springframework.security.core.userdetails.User(user.getLogin(),
+                user.getPassword(),
+                roles);
     }
 }
