@@ -1,4 +1,4 @@
-package com.polarnick.test.entities;
+package com.polarnick.test.server.entities;
 
 /**
  * @author Polyarnyi Nikolay

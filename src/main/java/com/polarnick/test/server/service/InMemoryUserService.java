@@ -1,7 +1,7 @@
-package com.polarnick.test.service;
+package com.polarnick.test.server.service;
 
-import com.polarnick.test.entities.User;
-import com.polarnick.test.entities.UserCredential;
+import com.polarnick.test.server.entities.User;
+import com.polarnick.test.server.entities.UserCredential;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

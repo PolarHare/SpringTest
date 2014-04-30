@@ -1,4 +1,4 @@
-package com.polarnick.test.config;
+package com.polarnick.test.server.config;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

@@ -5,7 +5,7 @@
         <title>Hello World page</title>
     </head>
     <body>
-        <%--@elvariable id="user" type="com.polarnick.test.entities.User"--%>
+    <%--@elvariable id="user" type="com.polarnick.test.server.entities.User"--%>
         <div class="container">
             <h1>Эта страница защищена!</h1>
             <p>

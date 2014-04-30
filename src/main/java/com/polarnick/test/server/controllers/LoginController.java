@@ -1,7 +1,7 @@
-package com.polarnick.test.controllers;
+package com.polarnick.test.server.controllers;
 
-import com.polarnick.test.entities.User;
-import com.polarnick.test.service.UserService;
+import com.polarnick.test.server.entities.User;
+import com.polarnick.test.server.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

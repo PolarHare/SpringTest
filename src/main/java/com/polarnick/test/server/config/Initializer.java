@@ -1,4 +1,4 @@
-package com.polarnick.test.config;
+package com.polarnick.test.server.config;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -20,7 +20,7 @@ public class Initializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.setConfigLocation("com.polarnick.test.config");
+        context.setConfigLocation("com.polarnick.test.server.config");
         servletContext.addListener(new ContextLoaderListener(context));
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("MyDispatcherServlet", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);

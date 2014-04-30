@@ -1,6 +1,6 @@
-package com.polarnick.test.config;
+package com.polarnick.test.server.config;
 
-import com.polarnick.test.service.UserDetailsServiceImpl;
+import com.polarnick.test.server.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
