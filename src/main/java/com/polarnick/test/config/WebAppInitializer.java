@@ -1,4 +1,4 @@
-package com.polarnick.test;
+package com.polarnick.test.config;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -12,25 +12,20 @@ import javax.servlet.ServletRegistration;
 
 /**
  * http://kielczewski.eu/2013/11/spring-mvc-without-web-xml-using-webapplicationinitializer/
- *
+ * http://devcolibri.com/3810
  *
  * @author Polyarnyi Nikolay
  */
-public class AppInitializer implements WebApplicationInitializer {
+public class WebAppInitializer implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-        WebApplicationContext context = getContext();
+        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+        context.setConfigLocation("com.polarnick.test.config");
         servletContext.addListener(new ContextLoaderListener(context));
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("MyDispatcherServlet", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
-    }
-
-    private AnnotationConfigWebApplicationContext getContext() {
-        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.setConfigLocation("com.polarnick.test.config");
-        return context;
     }
 
 }
