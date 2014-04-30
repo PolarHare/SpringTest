@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
  * @author Polyarnyi Nikolay
  */
 @Configuration
-@ComponentScan(basePackages = "com.polarnick.test")
+@ComponentScan(basePackages = "com.polarnick.test.server")
 public class AppConfig {
 
     @Bean
